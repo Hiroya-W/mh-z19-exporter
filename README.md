@@ -4,24 +4,26 @@ MH-Z19を使ったCO2のPrometheus exporter
 
 ## Setup
 
-プロジェクトは rye で管理されています。以下のコマンドで依存パッケージをインストールします。
+依存パッケージをインストールします。
 
 ```bash
-rye sync
+git clone https://github.com/Hiroya-W/mh-z19-exporter.git
+cd mh-z19-exporter
+pip insatll .
 ```
 
 ## Run
 
 MH-Z19 をroot権限無しで使えるようにしている場合は以下のようにして実行することが出来ます。
 
-```
-rye run python main.py
+```bash
+python main.py
 ```
 
 root権限が必要な場合は、以下のようにします。
 
 ```bash
-sudo .venv/bin/python main.py
+sudo python main.py
 ```
 
 詳しくは、[#How to use without root permission.](https://github.com/UedaTakeyuki/mh-z19#how-to-use-without-root-permission)を参照してください。
@@ -42,7 +44,7 @@ MH_Z19_EXPORTER_CO2 1166.0
 cd /opt
 git clone https://github.com/Hiroya-W/mh-z19-exporter.git
 cd /opt/mh-z19-exporter
-rye sync
+pip install .
 ```
 
 ```bash
