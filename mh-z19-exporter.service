@@ -1,0 +1,11 @@
+[Unit]
+Description=Tiny HTTPD
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/mh-z19-exporter/.venv/bin/python /opt/mh-z19-exporter/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
